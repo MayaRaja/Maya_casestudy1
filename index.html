@@ -13,22 +13,28 @@
 <body>
     <script>  
         function validateform(){  
-        var name=document.getElementById("username").value;
-        var password=document.getElementById("password").value;
+                              var name=document.getElementById("username").value;
+                              var password=document.getElementById("password").value;
     
-
           
-        if (name!="admin"){  
-          alert("Username invalid!");  
-          return false;  
-        }else if(password !="12345"){  
-          alert("Password incorrect!");  
-          return false;  
-          } 
+                           if (name!="admin"){  
+                                            alert("Username invalid!");  
+                                            return false;  
+                                            }else if(password !="12345"){  
+                                            alert("Password incorrect!");  
+                                            return false;  
+                                            } else if(password =="12345"&&name=="admin"){  
+                                           location.replace("main.html") 
+                                            return false;  
+                                            } 
+                                            
+
                   
-        } 
+                                     } 
         
-} 
+
+                                
+
         </script> 
    
 
@@ -51,7 +57,7 @@
     <br>
     
     <div >
-        <button id=login-button>Login</button>
+        <button id=login-button >Login</button>
     </div>
     <br>
     
